@@ -1,0 +1,50 @@
+#include "/home/alfred/.colors/barrage"
+
+! ###### General settings ############################
+! ####################################################
+URxvt*perl-lib:	/usr/lib/urxvt/perl
+URxvt*perl-ext-common: default,font-size,url-select,clipboard,matcher
+URxvt*scrollBar: False
+URxvt*cursorUnderline: 0 
+URxvt*cursorBlink: true
+URxvt*internalBorder: 5
+URxvt*dynamicColors: on
+URxvt.urgentOnBell:  true
+URxvt*termName: screen-256color
+URxvt*geometry: 150x30
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! ###### Font ########################################
+! ####################################################
+urxvt*letterSpace: -2 
+URxvt*font:     xft:Monospace:pixelsize=12
+URxvt*boldFont: xft:Monospace:pixelsize=12
+Xft.dpi: 96
+Xft.antialias: false
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+
+
+
+! copy and paste using SHIFT-CTRL-C and SHIFT-CTRL-V
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+
+
+
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+URxvt.colorUL: #4682B4
+! select url
+URxvt.keysym.C-i: perl:url-select:select_next
+! search terminal
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+
+
+URxvt.keysym.C-equal:	perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
+URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
+
